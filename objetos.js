@@ -78,6 +78,22 @@ class ProgramWindow{
         else
             this.size.height=tam.height
     }
+    //Punto 5
+    move(movewindow) {
+        if (movewindow.x < 0)
+            this.position.x = 0;
+        else if (movewindow.x + this.size.width > this.screenSize.width)
+            this.position.x = this.screenSize.width - this.size.width;
+        else
+            this.position.x = movewindow.x;
+
+        if (movewindow.y < 0)
+            this.position.y = 0;
+        else if (movewindow.y + this.size.height > this.screenSize.height)
+            this.position.y = this.screenSize.height - this.size.height;
+        else
+            this.position.y = movewindow.y;
+    }
 }
 
 console.log("----------------------------------------------------");
@@ -104,3 +120,9 @@ console.log("----------------------------------------------------");
 const newSize = new Size(600, 400);
 programWindow.resize(newSize);
 console.log(programWindow.size);
+
+console.log("----------------------------------------------------");
+//Prueba punto 5
+const newPosition = new Position(50, 100);
+programWindow.move(newPosition);
+console.log(programWindow.position);
