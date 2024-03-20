@@ -94,6 +94,12 @@ class ProgramWindow{
         else
             this.position.y = newPosition.y;
     }
+    //Punto 6
+    changeWindow(newSize, newPosition) {
+        this.resize(newSize);
+        this.move(newPosition);
+        return this;
+    }
 }
 
 console.log("----------------------------------------------------");
@@ -126,3 +132,17 @@ const newPosition = new Position(50, 100);
 programWindow.move(newPosition); 
 console.log(programWindow.Position);
 console.log("----------------------------------------------------");
+
+//Pruebas punto 6
+// Definición de las clases y funciones omitida por brevedad
+// Crear una instancia de ProgramWindow
+const myProgramWindow = new ProgramWindow();
+// Función para cambiar el tamaño y posición de la ventana
+function changeWindow(programWindow) {
+    const newSize = new Size(400, 300);
+    const newPosition = new Position(100, 150);
+    programWindow.changeWindow(newSize, newPosition);
+}
+changeWindow(myProgramWindow);
+console.log("Ancho de la ventana:", myProgramWindow.size.width);
+
