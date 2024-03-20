@@ -120,18 +120,9 @@ console.log("----------------------------------------------------");
 const newSize = new Size(600, 400);
 programWindow.resize(newSize);
 console.log(programWindow.size);
-<<<<<<< HEAD
 console.log("----------------------------------------------------");
 //Punto 5
 const newPosition = new Position(50, 100);
 programWindow.move(newPosition); 
 console.log(programWindow.Position);
 console.log("----------------------------------------------------");
-=======
-
-console.log("----------------------------------------------------");
-//Prueba punto 5
-const newPosition = new Position(50, 100);
-programWindow.move(newPosition);
-console.log(programWindow.position);
->>>>>>> 18460348421441b5c3093c85cf4c97e160b81e80
